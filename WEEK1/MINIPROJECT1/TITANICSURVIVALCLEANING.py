@@ -39,6 +39,7 @@ data_cleaned["Sex"] = le.fit_transform(data_cleaned["Sex"])
 data_cleaned["Embarked"] = le.fit_transform(data_cleaned["Embarked"])
 
 print(f'THE DATASET AFETR THE ENCODING: \n {data_cleaned.loc[:50,["Sex","Embarked"]]}')
+# print(f'THE DATASET : {data_cleaned.to_string()}') # print the entire data
 
 plt.hist(data_cleaned["Age"],bins=20)
 plt.title("THE AGE DISTRIBUTION ")
