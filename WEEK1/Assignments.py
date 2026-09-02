@@ -1,7 +1,8 @@
 '''1.Load a dataset using Pandas and summarize basic stats '''
 import pandas as pd 
 from sklearn.preprocessing import LabelEncoder
-
+import numpy as np
+ # pd.options.display.max_rows = 999 # to print the entire rows
 data = pd.read_csv("Titanic-Dataset.csv")
 
 print(data)
@@ -15,6 +16,10 @@ data_describe = pd.read_csv("Titanic-Dataset.csv").describe()
 print(f'THE MISSING VALUES : \n {data.isnull()}')
 print(f'THE TOTAL MISSING VALUES: \n {data.isnull().sum()}')
 print(f'TOTAL MISSING VALUE IN WHOLE DATA SETS: \n {data.isnull().sum().sum()}')
+missing = data.isnull().sum().sum()
+total_cells = np.prod(data.shape)
+missing_percentage = (missing/total_cells)*100
+print(f'The percentage of missing value in dataset {missing_percentage}')
 
 #check the values column by column
 
