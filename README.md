@@ -6,7 +6,6 @@
 - **Mode:** Online
 - **Duration:** 6 Weeks
 - **Start Date:** 31 July 2026
-- **End Date:** 11 September 2026
 
 ## 📖 Weekly Workflow
 For each week (Week 1 – Week 6):
